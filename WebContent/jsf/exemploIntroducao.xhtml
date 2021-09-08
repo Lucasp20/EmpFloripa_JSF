@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/199/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+	<title>Insert title here</title>
+	
+	<style>
+		.mens{
+			color: red;
+		}
+	
+	</style>
+</h:head>
+
+<h:body>
+	<h1>Cadastro de Cliente</h1>
+
+	<h:messages styleClass="mens"/>
+	
+	<h:form id="form_teste">
+
+		<h:panelGrid columns="2">
+	
+			<h:outputLabel value="Name:" />
+			<h:inputText id="nome" value="#{clienteC.pessoaFisica.nome}" required="true" 
+								requiredMessage="nome é obrigatório"/>
+			
+
+			<h:outputLabel value="E-mail:" />
+			<h:inputText id="email" value="#{clienteC.pessoaFisica.email}" required="true" 
+								requiredMessage="email é obrigatório" />
+			
+			<h:outputLabel value="Cpf:" />
+			<h:inputText id="cpf" value="#{clienteC.pessoaFisica.cpf}" required="true" 
+								requiredMessage="cpf é obrigatório" />
+			
+			<h:outputLabel value="Rg:" />
+			<h:inputText id="rg" value="#{clienteC.pessoaFisica.rg}" required="true" 
+								requiredMessage="rg é obrigatório" />
+			
+						
+				<!-- primeira coluna --> 
+				<h:commandButton value="Salvar" action="#{clienteC.salvar()}" />
+				
+		</h:panelGrid>
+		
+		</h:form>
+		
+</h:body>
+</html>
